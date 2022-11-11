@@ -10,6 +10,8 @@ fetch(url)
 function scraping(string_html, contet_type){
     let parser = new DOMParser();
     let doc = parser.parseFromString(string_html,contet_type);
-    const valor = doc.querySelector(".price__last .price-item--regular .money")
-    console.log(valor)
+    const valor = doc.querySelector(".money ").innerHTML
+    const nome = doc.querySelector(".productView-title span").innerHTML
+    console.log(valor, nome)
+    
 }
